@@ -1,0 +1,147 @@
+@import "css3.less";
+
+// Styles for bayes app components
+
+.no-range .bayes-range{
+	display: none;
+}
+
+.bayes{
+
+	box-sizing: border-box;
+	font-family: tahoma, arial, sans-serif;
+	font-size: 14px;
+	margin-top: 10px;
+
+	*{
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline;
+	}
+
+	.bayes-clearfix:before, .bayes-clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }
+	.bayes-clearfix:after { clear: both; }
+	.bayes-clearfix { zoom: 1; }
+
+	.bayes-form{
+		float: left;
+		form{
+			fieldset{
+				border: 0;
+			}
+			.bayes-field{
+				margin-bottom: 10px;
+				label{
+					float: left;
+					width: 140px;
+					line-height: 20px;
+				}
+				input[type=number],
+				input[type=text]{
+					height: 30px;
+					width: 120px;
+					.css3_border_radius(5px);
+				}
+				.bayes-inputs span{
+					font-size: 14px;
+					line-height: 18px;
+				}
+				input[type=range]{
+					width: 120px;
+					margin-bottom: 5px;
+				}
+			}
+			.bayes-inputs{
+				float: left;
+				margin-right: 10px;
+				width: 120px;
+			}
+			.bayes-hypothesis{
+				float: left;
+				margin-right: 20px;
+				&.bayes-fortiori{
+					.bayes-inputs{
+						float: left;
+						width: 55px;
+						input{
+							width: 55px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.bayes-graph{
+		float: left;
+		font-size: 12px;
+		width: 420px;
+		margin-left: 20px;
+		text.bar, text.label, text.prior-label, text.post-label, text.eq{
+			fill: black;
+		}
+		.hypotheses{
+			rect {
+				stroke: white;
+				fill: steelblue;
+			}
+			text.rule{
+				fill: steelblue;
+			}
+		}
+		.expected-evidence{
+			rect {
+				stroke: white;
+				fill: magenta;
+			}
+			text.rule{
+				fill: magenta;
+			}		
+		}
+		.posteriors{
+			rect {
+				stroke: white;
+				fill: lightseagreen;
+			}
+			text.rule{
+				fill: lightseagreen;
+			}		
+		}
+		.circle-expecteds,.circle-hypotheses,.circle-posterior{
+			fill: steelblue;
+			stroke: white;
+		}
+		.circle-expected-0,.circle-hypotheses-0,.circle-posterior-0{
+			fill: steelblue;
+		}
+		.circle-expected-1,.circle-hypotheses-1,.circle-posterior-1{
+			fill: magenta;
+		}
+		.circle-expected-2,.circle-hypotheses-2,.circle-posterior-2{
+			fill: lightseagreen;
+		}
+		.venn{
+			circle{
+				stroke: black;
+				stroke-width: 1.5px;
+			}
+			.prior{
+				fill: lightseagreen;
+			}
+			.consequent_prior{
+				fill: magenta;
+				fill-opacity: .50;
+			}
+		}
+	}
+}
+
+.bayes-tooltip{
+	background-color: #fff;
+	padding: 10px;
+	border: 1px solid #FF5E99;
+	.css3_border_radius(4px);
+}

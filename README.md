@@ -10,13 +10,13 @@ Also a special thanks to [Richard Carrier](http://www.richardcarrier.info/) for 
 
 To include any of the following calculators on your page, first you must include this script tag in the head of your document:
 
-	<script src="http://camspiers.github.com/Bayes/javascripts/bayes-calc-so.v1.1.js" charset="utf-8"></script>
+	<script src="https://suwungtandon.github.io/BayesianAlgoritm-calculator-and-visualization-tool/javascripts/bayes-calc-so.v1.1.js" charset="utf-8"></script>
 
 Once these are included on the page, adding a calculator is as easy as adding a small html snippet into the desired location on your page.
 
 ## Examples
 
-To see a demo of the following examples, visit [the demo page](http://camspiers.github.com/Bayes/)
+To see a demo of the following examples, visit [the demo page](https://suwungtandon.github.io/BayesianAlgoritm-calculator-and-visualization-tool/)
 
 ### Simple
 	<div class="bayes-calc" data-config='{"type": "simple"}'></div>
